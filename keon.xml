@@ -7,6 +7,9 @@
   <remote fetch="git://codeaurora.org/quic/qrd-android" name="QRD" />
   <remote fetch="git://github.com/reimago/" 		name="reimago" />
 
+  <!-- Quitar cuando este mi device propio -->
+  <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
+
   <default remote="QRD" revision="ics_master_qrd_101" sync-j="9"/>
    
   <project name="peak_android_build" path="build" remote="reimago" revision="master"/>
@@ -131,7 +134,7 @@
   <project name="platform/packages/apps/Browser" path="packages/apps/Browser"  />
   <project name="platform/packages/apps/Calculator" path="packages/apps/Calculator"  />
   <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar"  />
-  <project name="ics_camera" path="packages/apps/Camera" remote="reimago" revision="master" />
+  <project name="platform/packages/apps/Camera" path="packages/apps/Camera"  />
   <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver"  />
   <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller"  />
   <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts"  />
@@ -241,8 +244,9 @@
   <project name="platform/external/tinyalsa" path="external/tinyalsa" remote="caf" revision="refs/tags/M8960AAAAANLYA1005304"/> 
   <project name="platform/external/libpng"   path="external/libpng"   remote="caf" revision="refs/tags/M8960AAAAANLYA100715A"/> 
 
-  <project name="platform/external/sqlite"   path="external/sqlite"   remote="caf" revision="fb30e613139b8836fdc8e81e166cf3a76e5fa17f"/> 
-  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" remote="caf" revision="refs/tags/M8960AAAAANLYA100705"/>  
+  <project name="platform/external/sqlite"   path="external/sqlite"   remote="caf" revision="fb30e613139b8836fdc8e81e166cf3a76e5fa17f"/>
+  <project name="platform/system/vold"       path="system/vold" remote="caf" revision="refs/tags/M8960AAAAANLYA100715A"/> 
+
     
   <project name="platform/bootable/recovery"                  path="bootable/recovery"/> 
   <project name="platform/bootable/diskinstaller"             path="bootable/diskinstaller"/> 
@@ -255,7 +259,6 @@
   <project name="platform/external/bluetooth/hcidump"         path="external/bluetooth/hcidump"/> 
   <project name="platform/external/dbus"                      path="external/dbus"/> 
   <project name="platform/external/dhcpcd"                    path="external/dhcpcd"/> 
-  <project name="platform/external/elfutils"                  path="external/elfutils" /> 
   <project name="platform/frameworks/support"                 path="frameworks/support"/> 
   <project name="platform/libcore"                            path="libcore"/> 
   <project name="platform/prebuilt"                           path="prebuilt"/> 
@@ -264,7 +267,8 @@
   <project name="platform/system/extras"                      path="system/extras"/> 
   <project name="platform/system/media"                       path="system/media"/> 
   <project name="platform/system/netd"                        path="system/netd"/> 
-  <project name="platform/system/vold"                        path="system/vold"/> 
+  <project name="platform/hardware/qcom/gps" 		      path="hardware/qcom/gps"/>  
+
   <project name="platform/hardware/qcom/media"                path="hardware/qcom/media"/> 
   <project name="platform/hardware/msm7k"                     path="hardware/msm7k"/> 
   <project name="platform/vendor/qcom-opensource/omx/mm-core" path="vendor/qcom/opensource/omx/mm-core"/> 
@@ -272,15 +276,15 @@
     
   <project name="device_qcom_msm7627a"        path="device/qcom/msm7627a"        remote="gp-b2g" revision="master" /> 
   
-  <project name="gp-peak-kernel"              path="kernel"                      remote="gp-b2g" revision="master" /> 
+  <project name="device-gp-keon" path="device/geeksphone/keon"	remote="b2g" 	revision="master" />
+  <project name="gp-keon-kernel" path="kernel"			remote="gp-b2g" revision="master" />
+  <project name="hardware_ril" path="hardware/ril" 		remote="gp-b2g" revision="keon" />
+
   <project name="external_compat-wireless"    path="external/compat-wireless"    remote="gp-b2g" revision="master" /> 
   <project name="frameworks_base"             path="frameworks/base"             remote="gp-b2g" revision="master" /> 
    
   <project name="hardware_qcom_display"       path="hardware/qcom/display"       remote="gp-b2g" revision="master" /> 
   <project name="hardware_libhardware"        path="hardware/libhardware"        remote="gp-b2g" revision="master" /> 
   <project name="hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="gp-b2g" revision="master" />
-
-  <project name="device-gp-peak"              path="device/geeksphone/peak"  remote="reimago" revision="master" />
-  <project name="peak_hardware_ril"           path="hardware/ril"            remote="reimago" revision="master" />
-
+  
 </manifest>
